@@ -1,0 +1,31 @@
+<%= form_with model: @user do %>
+    <%= label_tag(:name, "Name") %>
+    <br>
+    <%= text_field(:user, :name) %>
+    <br>
+    <%= label_tag(:height, "Height") %>
+    <br>
+    <%= number_field(:user, :height) %>
+    <br>
+    <%= label_tag(:happiness, "Happiness") %>
+    <br>
+    <%= number_field(:user, :happiness)  %>
+    <br>
+    <%= label_tag(:nausea, "Nausea") %>
+    <br>
+    <%= number_field(:user, :nausea) %>
+    <br>
+    <%= label_tag(:tickets, "Tickets") %>
+    <br>
+    <%= number_field(:user, :tickets) %>
+    <br>
+    <%= label_tag(:admin, "Admin") %>
+    <br>
+    <%= check_box_tag(:admin) %>
+    <br>
+    <%= label_tag(:password, "Password") %>
+    <br>
+    <%= text_field(:user, :password) %>
+    <br>
+    <%= submit_tag "Create User" %>
+<% end %>
