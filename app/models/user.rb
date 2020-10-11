@@ -10,4 +10,5 @@ class User < ApplicationRecord
             "sad"
         end
     end
+    
 end

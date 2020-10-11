@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
     def index
 
     end
@@ -10,6 +11,7 @@ class UsersController < ApplicationController
     def create
         @user = User.create(user_params)
         redirect_to user_path(@user)
+        session[:user_id] = @user.id
     end
 
     def edit
@@ -21,7 +23,11 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user = User.find_by_id(params[:id])
+        if logged_in?
+            @user = User.find_by_id(params[:id])
+        else
+            redirect_to root_path
+        end
     end
 
     def destroy

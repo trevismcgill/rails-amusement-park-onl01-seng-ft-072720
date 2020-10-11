@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :attractions
 
   root 'welcome#home'
+  get '/signin', to: 'session#new'
+  post '/signin', to: 'session#create'
 end
