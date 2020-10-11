@@ -1,6 +1,13 @@
 <%= @user.name %>
-Mood
-happy <%= @user.happiness %>
+<br>
+Mood - <%= @user.mood %>
+<br>
+<%= @user.happiness %>
 <%= @user.nausea %>
 <%= @user.tickets %>
 <%= @user.height %>
+<br>
+ADMIN - <%= @user.admin %>
+
+<%= link_to "See attractions", attractions_path %>
+

@@ -1,0 +1,6 @@
+<%= @attraction.name %>
+<%= form_with model: @ride do %>
+    <%= hidden_field(:user, :id) %>
+    <%= hidden_field(:attraction, :id) %>
+    <%= submit_tag "Go on this ride" %>
+<% end %>
